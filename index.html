@@ -5,108 +5,260 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy - CheckFit AI</title>
 <style>
-body{
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
     font-family: Arial, sans-serif;
-    max-width: 900px;
+    max-width: 960px;
     margin: auto;
     padding: 40px 20px;
-    line-height: 1.7;
-    color:#222;
-}
-h1,h2{
-    color:#111;
-}
+    line-height: 1.8;
+    color: #222;
+    background: #fff;
+  }
+
+  h1 { font-size: 2rem; color: #111; margin-bottom: 6px; }
+  h2 { font-size: 1.15rem; color: #111; margin: 28px 0 10px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  p, li { font-size: 0.97rem; color: #333; }
+  ul { padding-left: 22px; margin-top: 6px; }
+  li { margin-bottom: 6px; }
+  a { color: #1a73e8; }
+  .meta { color: #555; font-size: 0.9rem; margin-bottom: 30px; }
+  .dev-info { background: #f5f5f5; border-left: 4px solid #1a73e8; padding: 14px 18px; margin-bottom: 28px; border-radius: 4px; font-size: 0.93rem; }
+  .dev-info strong { color: #111; }
+
+  /* Lang Toggle */
+  .lang-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+  .lang-btn {
+    padding: 7px 22px;
+    border: 2px solid #1a73e8;
+    border-radius: 20px;
+    background: #fff;
+    color: #1a73e8;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .lang-btn.active {
+    background: #1a73e8;
+    color: #fff;
+  }
+
+  .lang-section { display: none; }
+  .lang-section.visible { display: block; }
 </style>
 </head>
 <body>
-<h1>Privacy Policy</h1>
-<p>Effective Date: June 14, 2026</p>
-<p>
-CheckFit AI respects your privacy and is committed to protecting your personal information.
-This Privacy Policy explains how information is collected, used, stored, and protected when using our application.
-</p>
-<h2>Information We Collect</h2>
-<ul>
-<li>Account information such as email address (if provided)</li>
-<li>Fitness or body analysis data submitted by users</li>
-<li>Photos or camera input used for AI analysis</li>
-<li>Device and usage information for app functionality and security</li>
-</ul>
-<h2>How We Use Information</h2>
-<ul>
-<li>Provide AI-based fitness analysis and recommendations</li>
-<li>Improve app performance and user experience</li>
-<li>Maintain security and prevent abuse</li>
-<li>Provide customer support</li>
-</ul>
-<h2>Camera and Photos</h2>
-<p>
-The app may request camera or gallery access only for analysis features requested by the user.
-Images are not shared publicly. Photos submitted for AI analysis are used only to generate your
-results and are handled according to the retention rules described below.
-</p>
-<h2>Data Retention</h2>
-<p>
-We retain your personal data only for as long as necessary to provide our services to you and for
-the purposes described in this Privacy Policy:
-</p>
-<ul>
-<li>Account information and fitness/body analysis data are retained for as long as your account remains active.</li>
-<li>If your account is inactive for 12 months, or after you request account deletion, your personal data is deleted or anonymized within 30 days, except where a longer retention period is required by law (for example, tax, accounting, or legal compliance purposes).</li>
-<li>Photos used for AI analysis are processed to generate your results and are deleted from our active storage within 30 days of upload, unless you choose to keep them saved in your profile.</li>
-<li>Device, usage, analytics, and crash data are retained according to the policies of our third-party providers (see "Third-Party Services" below), typically for up to 14 months.</li>
-</ul>
-<h2>Data Deletion</h2>
-<p>
-You can request deletion of your account and all associated personal data at any time:
-</p>
-<ul>
-<li><strong>In-app:</strong> Go to Settings &gt; Account &gt; Delete My Account.</li>
-<li><strong>By email:</strong> Send a request to <a href="mailto:support@checkfitai.com">support@checkfitai.com</a> with the subject "Account Deletion Request", using the email address associated with your account.</li>
-</ul>
-<p>
-Once we receive your request, we will delete or anonymize your personal data within 30 days, except
-for information we are legally required to retain. You will receive a confirmation once the deletion
-is complete.
-</p>
-<h2>Third-Party Services</h2>
-<p>
-CheckFit AI may use trusted third-party services such as:
-</p>
-<ul>
-<li>Google Firebase</li>
-<li>Google Play Services</li>
-<li>Supabase (backend data storage)</li>
-<li>Analytics and crash reporting tools</li>
-</ul>
-<p>
-These providers may process and retain data according to their own privacy policies and retention schedules.
-</p>
-<h2>Data Security</h2>
-<p>
-We use reasonable security measures to protect user information from unauthorized access or disclosure.
-</p>
-<h2>Children's Privacy</h2>
-<p>
-This application is not intended for children under 13 years old.
-</p>
-<h2>Your Rights</h2>
-<p>
-Depending on your location, you may have the right to access, correct, export, or request deletion of your
-personal data, and to withdraw any consent you have provided. To exercise these rights, contact us using
-the details below.
-</p>
-<h2>Changes to This Privacy Policy</h2>
-<p>
-We may update this Privacy Policy from time to time. Updates will be posted on this page with a
-revised "Effective Date".
-</p>
-<h2>Contact</h2>
-<p>
-If you have questions regarding this Privacy Policy, contact us:
-</p>
-<p>
-Email: support@checkfitai.com
-</p>
+
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('en')">English</button>
+  <button class="lang-btn" onclick="setLang('zh')">中文</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ ENGLISH ══ -->
+<div id="sec-en" class="lang-section visible">
+
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective Date: June 25, 2026</p>
+
+  <div class="dev-info">
+    <strong>App Name:</strong> CheckFit AI &nbsp;|&nbsp;
+    <strong>Developer:</strong> CheckFit AI Development Team
+  </div>
+
+  <p>
+    CheckFit AI respects your privacy and is committed to protecting your personal information.
+    This Privacy Policy explains how information is collected, used, stored, and protected when using our application.
+  </p>
+
+  <h2>Information We Collect</h2>
+  <ul>
+    <li>Account information such as email address (if provided)</li>
+    <li>Fitness or body analysis data submitted by users</li>
+    <li>Photos or camera input used for AI analysis</li>
+    <li>Device and usage information for app functionality and security</li>
+  </ul>
+
+  <h2>How We Use Information</h2>
+  <ul>
+    <li>Provide AI-based fitness analysis and recommendations</li>
+    <li>Improve app performance and user experience</li>
+    <li>Maintain security and prevent abuse</li>
+    <li>Provide customer support</li>
+  </ul>
+
+  <h2>Camera and Photos</h2>
+  <p>
+    The app may request camera or gallery access only for analysis features requested by the user.
+    Images are not shared publicly. Photos submitted for AI analysis are used only to generate your
+    results and are handled according to the retention rules described below.
+  </p>
+
+  <h2>Data Retention</h2>
+  <p>We retain your personal data only for as long as necessary to provide our services:</p>
+  <ul>
+    <li>Account information and fitness/body analysis data are retained for as long as your account remains active.</li>
+    <li>If your account is inactive for 12 months, or after you request account deletion, your personal data is deleted or anonymized within 30 days, except where a longer retention period is required by law.</li>
+    <li>Photos used for AI analysis are processed to generate your results and are deleted from our active storage within 30 days of upload, unless you choose to keep them saved in your profile.</li>
+    <li>Device, usage, analytics, and crash data are retained according to the policies of our third-party providers, typically for up to 14 months.</li>
+  </ul>
+
+  <h2>Data Deletion</h2>
+  <p>You can request deletion of your account and all associated personal data at any time:</p>
+  <ul>
+    <li><strong>In-app:</strong> Go to Settings &gt; Account &gt; Delete My Account.</li>
+    <li><strong>By email:</strong> Send a request to <a href="mailto:support@checkfitai.com">support@checkfitai.com</a> with the subject "Account Deletion Request", using the email address associated with your account.</li>
+  </ul>
+  <p>
+    Once we receive your request, we will delete or anonymize your personal data within 30 days, except
+    for information we are legally required to retain. You will receive a confirmation once the deletion is complete.
+  </p>
+
+  <h2>Third-Party Services</h2>
+  <p>CheckFit AI may use trusted third-party services such as:</p>
+  <ul>
+    <li>Google Firebase</li>
+    <li>Google Play Services</li>
+    <li>Huawei Mobile Services (HMS)</li>
+    <li>Supabase (backend data storage)</li>
+    <li>Google AdMob (advertising)</li>
+    <li>Analytics and crash reporting tools</li>
+  </ul>
+  <p>These providers may process and retain data according to their own privacy policies and retention schedules.</p>
+
+  <h2>Data Security</h2>
+  <p>We use reasonable security measures to protect user information from unauthorized access or disclosure.</p>
+
+  <h2>Children's Privacy</h2>
+  <p>This application is not intended for children under 13 years old. We do not knowingly collect personal information from children under 13.</p>
+
+  <h2>Your Rights</h2>
+  <p>
+    Depending on your location, you may have the right to access, correct, export, or request deletion of your
+    personal data, and to withdraw any consent you have provided. To exercise these rights, contact us using the details below.
+  </p>
+
+  <h2>Changes to This Privacy Policy</h2>
+  <p>
+    We may update this Privacy Policy from time to time. Updates will be posted on this page with a
+    revised "Effective Date". Continued use of the app after any changes constitutes acceptance of the updated policy.
+  </p>
+
+  <h2>Contact</h2>
+  <p>If you have questions regarding this Privacy Policy, contact us:</p>
+  <p>Email: <a href="mailto:support@checkfitai.com">support@checkfitai.com</a></p>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ CHINESE ══ -->
+<div id="sec-zh" class="lang-section">
+
+  <h1>隐私政策</h1>
+  <p class="meta">生效日期：2026年6月25日</p>
+
+  <div class="dev-info">
+    <strong>应用名称：</strong>CheckFit AI &nbsp;|&nbsp;
+    <strong>开发者：</strong>CheckFit AI 开发团队
+  </div>
+
+  <p>
+    CheckFit AI 尊重您的隐私，致力于保护您的个人信息。
+    本隐私政策说明了在使用本应用程序时，我们如何收集、使用、存储和保护您的信息。
+  </p>
+
+  <h2>我们收集的信息</h2>
+  <ul>
+    <li>账户信息，例如电子邮件地址（如果提供）</li>
+    <li>用户提交的健身或身体分析数据</li>
+    <li>用于AI分析的照片或摄像头输入</li>
+    <li>用于应用功能和安全的设备及使用信息</li>
+  </ul>
+
+  <h2>我们如何使用信息</h2>
+  <ul>
+    <li>提供基于AI的健身分析和建议</li>
+    <li>改善应用性能和用户体验</li>
+    <li>维护安全并防止滥用</li>
+    <li>提供客户支持</li>
+  </ul>
+
+  <h2>摄像头与照片</h2>
+  <p>
+    本应用仅在用户请求分析功能时，才会请求摄像头或图库访问权限。
+    图像不会公开共享。提交用于AI分析的照片仅用于生成您的分析结果，
+    并按照下文所述的保留规则进行处理。
+  </p>
+
+  <h2>数据保留</h2>
+  <p>我们仅在提供服务所必要的时间内保留您的个人数据：</p>
+  <ul>
+    <li>账户信息和健身/身体分析数据在您的账户处于活跃状态期间保留。</li>
+    <li>如果您的账户连续12个月不活跃，或在您请求删除账户后，您的个人数据将在30天内被删除或匿名化，法律要求保留的信息除外。</li>
+    <li>用于AI分析的照片在生成分析结果后，将在上传后30天内从我们的活跃存储中删除，除非您选择将其保存在个人资料中。</li>
+    <li>设备、使用、分析和崩溃数据根据第三方服务提供商的政策保留，通常最长保留14个月。</li>
+  </ul>
+
+  <h2>数据删除</h2>
+  <p>您可以随时请求删除您的账户及所有相关个人数据：</p>
+  <ul>
+    <li><strong>应用内：</strong>前往 设置 &gt; 账户 &gt; 删除我的账户。</li>
+    <li><strong>通过电子邮件：</strong>使用与您账户关联的电子邮件地址，向 <a href="mailto:support@checkfitai.com">support@checkfitai.com</a> 发送主题为"账户删除请求"的邮件。</li>
+  </ul>
+  <p>
+    收到您的请求后，我们将在30天内删除或匿名化您的个人数据，法律要求保留的信息除外。
+    删除完成后，您将收到确认通知。
+  </p>
+
+  <h2>第三方服务</h2>
+  <p>CheckFit AI 可能使用以下受信任的第三方服务：</p>
+  <ul>
+    <li>Google Firebase</li>
+    <li>Google Play 服务</li>
+    <li>华为移动服务（HMS）</li>
+    <li>Supabase（后端数据存储）</li>
+    <li>Google AdMob（广告）</li>
+    <li>分析和崩溃报告工具</li>
+  </ul>
+  <p>这些服务提供商可能根据其自身的隐私政策和保留计划处理和保留数据。</p>
+
+  <h2>数据安全</h2>
+  <p>我们采取合理的安全措施，保护用户信息免遭未经授权的访问或披露。</p>
+
+  <h2>儿童隐私</h2>
+  <p>本应用不适用于13岁以下儿童。我们不会故意收集13岁以下儿童的个人信息。</p>
+
+  <h2>您的权利</h2>
+  <p>
+    根据您所在的地区，您可能有权访问、更正、导出或请求删除您的个人数据，
+    以及撤回您已提供的任何同意。如需行使上述权利，请通过下方联系方式与我们联系。
+  </p>
+
+  <h2>隐私政策的变更</h2>
+  <p>
+    我们可能会不时更新本隐私政策。更新内容将发布在本页面，并附有修订后的"生效日期"。
+    在任何变更后继续使用本应用即表示您接受更新后的政策。
+  </p>
+
+  <h2>联系我们</h2>
+  <p>如果您对本隐私政策有任何疑问，请联系我们：</p>
+  <p>电子邮件：<a href="mailto:support@checkfitai.com">support@checkfitai.com</a></p>
+
+</div>
+
+<script>
+  function setLang(lang) {
+    document.getElementById('sec-en').classList.toggle('visible', lang === 'en');
+    document.getElementById('sec-zh').classList.toggle('visible', lang === 'zh');
+    document.querySelectorAll('.lang-btn').forEach(function(btn, i) {
+      btn.classList.toggle('active', (i === 0 && lang === 'en') || (i === 1 && lang === 'zh'));
+    });
+  }
+</script>
+
 </body>
 </html>
